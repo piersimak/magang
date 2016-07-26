@@ -27,7 +27,7 @@ import diginetmedia.com.sikedes.R;
 import diginetmedia.com.sikedes.model.DataKemiskinan;
 
 
-public class DataKemiskinanAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> implements View.OnClickListener {
+public class DataKemiskinanAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>{
 
     Context context;
     List<DataKemiskinan> listDataKemiskinan;
@@ -70,28 +70,12 @@ public class DataKemiskinanAdapter extends RecyclerView.Adapter<RecyclerView.Vie
       //            .placeholder(R.drawable.loading)
       //            .into(dataKemiskinanViewHolder.gambarDataKemiskinan);
         dataKemiskinanViewHolder.gambarDataKemiskinan.setImageResource(Integer.parseInt(dataKemiskinan.getImageurl()));
-        dataKemiskinanViewHolder.cardViewDataKemiskinan.setTag(position);
-        dataKemiskinanViewHolder.cardViewDataKemiskinan.setOnClickListener(this);
+        dataKemiskinanViewHolder.txtAlamat.setText(dataKemiskinan.getAlamat());
 
-
-        selectedItems.put(Integer.parseInt(v.getTag().toString(), true);
     }
 
 
-    @Override
-    public void onClick(View v) {
-        // Save the selected positions to the SparseBooleanArray
-        if (selectedItems.get(Integer.parseInt(v.getTag().toString()), false)) {
-            //selectedItems.delete(pos);
-            v.setSelected(false);
-        }
-        else {
-            selectedItems.put(Integer.parseInt(v.getTag().toString()), true);
-            v.setSelected(true);
-        }
-       // Toast.makeText(context, "CLICKED",
-        //        Toast.LENGTH_LONG).show();
-    }
+
 
 
 
@@ -106,12 +90,13 @@ public class DataKemiskinanAdapter extends RecyclerView.Adapter<RecyclerView.Vie
     }
 
     static class DataKemiskinanViewHolder extends RecyclerView.ViewHolder {
-        public TextView txtDataKemiskinan;
+        public TextView txtDataKemiskinan, txtAlamat;
         public ImageView gambarDataKemiskinan;
         public CardView cardViewDataKemiskinan;
         public DataKemiskinanViewHolder(View itemView) {
             super(itemView);
             txtDataKemiskinan = (TextView) itemView.findViewById(R.id.namaKeluarga);
+            txtAlamat = (TextView) itemView.findViewById(R.id.txtAlamat);
             gambarDataKemiskinan = (ImageView) itemView.findViewById(R.id.gambarDataKemiskinan);
             cardViewDataKemiskinan = (CardView) itemView.findViewById(R.id.cardViewDataKemiskinan);
         }

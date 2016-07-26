@@ -10,6 +10,7 @@
     tools:context="diginetmedia.com.sikedes.activity.ListDataKemiskinan">
     <Button
         android:layout_width="match_parent"
+        android:id="@+id/btnjudul"
         android:layout_weight="0.6"
         android:text="Daftar Kemiskinan Di Dusun Tambakbayan"
         android:background="@drawable/selector_button_without_border"

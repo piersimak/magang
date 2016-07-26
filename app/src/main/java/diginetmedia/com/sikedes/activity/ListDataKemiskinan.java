@@ -9,6 +9,8 @@ import android.support.v7.widget.RecyclerView;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
+import android.widget.ImageButton;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -36,17 +38,17 @@ public class ListDataKemiskinan extends AppCompatActivity {
         context=this;
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         Bundle b = getIntent().getExtras();
-        getSupportActionBar().setTitle(b.getString("title",""));
-
+       // getSupportActionBar().setTitle(b.getString("title",""));
+        ((Button) findViewById(R.id.btnjudul)).setText("Daftar Kemiskinan Di "+b.getString("title",""));
         recyclerViewKemiskinan = (RecyclerView) findViewById(R.id.RecyclerViewDusun);
 
         listdataKemiskinan = new ArrayList<DataKemiskinan>();
 
-        listdataKemiskinan.add(new DataKemiskinan(String.valueOf(R.drawable.miskin1),"tes"));
-        listdataKemiskinan.add(new DataKemiskinan(String.valueOf(R.drawable.miskin2),"tes"));
-        listdataKemiskinan.add(new DataKemiskinan(String.valueOf(R.drawable.miskin3),"tes"));
-        listdataKemiskinan.add(new DataKemiskinan(String.valueOf(R.drawable.miskin4),"tes"));
-        listdataKemiskinan.add(new DataKemiskinan(String.valueOf(R.drawable.miskin5),"tes"));
+        listdataKemiskinan.add(new DataKemiskinan("Jl. Merpati No. 1",String.valueOf(R.drawable.miskin1),"Keluarga Abdul"));
+        listdataKemiskinan.add(new DataKemiskinan("Jl. Mangga No. 3",String.valueOf(R.drawable.miskin2),"Keluarga Bagus"));
+        listdataKemiskinan.add(new DataKemiskinan("Jl. Elang No. 6",String.valueOf(R.drawable.miskin3),"Keluarga Santoso"));
+        listdataKemiskinan.add(new DataKemiskinan("Jl. Anggur No. 2",String.valueOf(R.drawable.miskin4),"Keluarga Hadi"));
+        listdataKemiskinan.add(new DataKemiskinan("Jl. Jeruk No. 7",String.valueOf(R.drawable.miskin5),"Keluarga Putra"));
 
         recyclerViewKemiskinan = (RecyclerView) findViewById(R.id.RecyclerViewDusun);
         recyclerViewKemiskinan.setHasFixedSize(true);
@@ -56,7 +58,7 @@ public class ListDataKemiskinan extends AppCompatActivity {
         dataKemiskinanAdapter = new DataKemiskinanAdapter(listdataKemiskinan,recyclerViewKemiskinan,this);
         recyclerViewKemiskinan.setAdapter(dataKemiskinanAdapter);
 
-      /*  recyclerViewKemiskinan.addOnItemTouchListener(
+        recyclerViewKemiskinan.addOnItemTouchListener(
                 new RecyclerItemClickListener(this, new RecyclerItemClickListener.OnItemClickListener() {
                     @Override
                     public void onItemClick(View view, int position) {
@@ -68,7 +70,7 @@ public class ListDataKemiskinan extends AppCompatActivity {
                         startActivity(i);
                     }
                 })
-        );*/
+        );
 
     }
 
