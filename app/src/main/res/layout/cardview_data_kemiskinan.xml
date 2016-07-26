@@ -3,7 +3,9 @@
     xmlns:cardview="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     cardview:cardElevation="3dp"
-    android:layout_margin="10dp"
+    android:id="@+id/cardViewDataKemiskinan"
+    android:layout_margin="5dp"
+    android:background="@drawable/selector_recyclerview"
     cardview:cardUseCompatPadding="true"
     android:layout_gravity="center"
     android:layout_height="wrap_content">
@@ -13,7 +15,8 @@
         android:layout_height="wrap_content">
         <ImageView
             android:id="@+id/gambarDataKemiskinan"
-            android:layout_margin="5dp"
+            android:layout_margin="2dp"
+            android:scaleType="centerCrop"
             android:layout_width="match_parent"
             android:layout_height="130dp" />
         <TextView

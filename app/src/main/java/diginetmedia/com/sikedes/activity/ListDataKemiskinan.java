@@ -41,11 +41,13 @@ public class ListDataKemiskinan extends AppCompatActivity {
         recyclerViewKemiskinan = (RecyclerView) findViewById(R.id.RecyclerViewDusun);
 
         listdataKemiskinan = new ArrayList<DataKemiskinan>();
-        for(int i=0; i<5 ; i++)
-        {
-            DataKemiskinan temp = new DataKemiskinan("http://iconshow.me/media/images/ui/ios7-icons/png/512/social-android-outline.png","tes");
-            listdataKemiskinan.add(temp);
-        }
+
+        listdataKemiskinan.add(new DataKemiskinan(String.valueOf(R.drawable.miskin1),"tes"));
+        listdataKemiskinan.add(new DataKemiskinan(String.valueOf(R.drawable.miskin2),"tes"));
+        listdataKemiskinan.add(new DataKemiskinan(String.valueOf(R.drawable.miskin3),"tes"));
+        listdataKemiskinan.add(new DataKemiskinan(String.valueOf(R.drawable.miskin4),"tes"));
+        listdataKemiskinan.add(new DataKemiskinan(String.valueOf(R.drawable.miskin5),"tes"));
+
         recyclerViewKemiskinan = (RecyclerView) findViewById(R.id.RecyclerViewDusun);
         recyclerViewKemiskinan.setHasFixedSize(true);
         layoutManager = new GridLayoutManager(this,2);
@@ -54,7 +56,7 @@ public class ListDataKemiskinan extends AppCompatActivity {
         dataKemiskinanAdapter = new DataKemiskinanAdapter(listdataKemiskinan,recyclerViewKemiskinan,this);
         recyclerViewKemiskinan.setAdapter(dataKemiskinanAdapter);
 
-        recyclerViewKemiskinan.addOnItemTouchListener(
+      /*  recyclerViewKemiskinan.addOnItemTouchListener(
                 new RecyclerItemClickListener(this, new RecyclerItemClickListener.OnItemClickListener() {
                     @Override
                     public void onItemClick(View view, int position) {
@@ -66,7 +68,7 @@ public class ListDataKemiskinan extends AppCompatActivity {
                         startActivity(i);
                     }
                 })
-        );
+        );*/
 
     }
 

@@ -5,8 +5,10 @@ package diginetmedia.com.sikedes.adapter;
  */
 
 import android.content.Context;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.SparseBooleanArray;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,6 +16,7 @@ import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.RatingBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.squareup.picasso.Picasso;
@@ -24,7 +27,7 @@ import diginetmedia.com.sikedes.R;
 import diginetmedia.com.sikedes.model.DataKemiskinan;
 
 
-public class DataKemiskinanAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
+public class DataKemiskinanAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> implements View.OnClickListener {
 
     Context context;
     List<DataKemiskinan> listDataKemiskinan;
@@ -48,7 +51,6 @@ public class DataKemiskinanAdapter extends RecyclerView.Adapter<RecyclerView.Vie
 
 
 
-
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 
@@ -56,7 +58,7 @@ public class DataKemiskinanAdapter extends RecyclerView.Adapter<RecyclerView.Vie
         return new DataKemiskinanViewHolder(view);
 
     }
-
+    private SparseBooleanArray selectedItems;
     @Override
     public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
 
@@ -64,11 +66,35 @@ public class DataKemiskinanAdapter extends RecyclerView.Adapter<RecyclerView.Vie
         DataKemiskinanViewHolder dataKemiskinanViewHolder = (DataKemiskinanViewHolder) holder;
 
         dataKemiskinanViewHolder.txtDataKemiskinan.setText(dataKemiskinan.getNamakeluarga());
-         Glide.with(context).load(dataKemiskinan.getImageurl())
-                  .placeholder(R.drawable.loading)
-                  .into(dataKemiskinanViewHolder.gambarDataKemiskinan);
+      //   Glide.with(context).load(dataKemiskinan.getImageurl())
+      //            .placeholder(R.drawable.loading)
+      //            .into(dataKemiskinanViewHolder.gambarDataKemiskinan);
+        dataKemiskinanViewHolder.gambarDataKemiskinan.setImageResource(Integer.parseInt(dataKemiskinan.getImageurl()));
+        dataKemiskinanViewHolder.cardViewDataKemiskinan.setTag(position);
+        dataKemiskinanViewHolder.cardViewDataKemiskinan.setOnClickListener(this);
 
+
+        selectedItems.put(Integer.parseInt(v.getTag().toString(), true);
     }
+
+
+    @Override
+    public void onClick(View v) {
+        // Save the selected positions to the SparseBooleanArray
+        if (selectedItems.get(Integer.parseInt(v.getTag().toString()), false)) {
+            //selectedItems.delete(pos);
+            v.setSelected(false);
+        }
+        else {
+            selectedItems.put(Integer.parseInt(v.getTag().toString()), true);
+            v.setSelected(true);
+        }
+       // Toast.makeText(context, "CLICKED",
+        //        Toast.LENGTH_LONG).show();
+    }
+
+
+
 
     @Override
     public int getItemCount() {
@@ -82,10 +108,12 @@ public class DataKemiskinanAdapter extends RecyclerView.Adapter<RecyclerView.Vie
     static class DataKemiskinanViewHolder extends RecyclerView.ViewHolder {
         public TextView txtDataKemiskinan;
         public ImageView gambarDataKemiskinan;
+        public CardView cardViewDataKemiskinan;
         public DataKemiskinanViewHolder(View itemView) {
             super(itemView);
             txtDataKemiskinan = (TextView) itemView.findViewById(R.id.namaKeluarga);
             gambarDataKemiskinan = (ImageView) itemView.findViewById(R.id.gambarDataKemiskinan);
+            cardViewDataKemiskinan = (CardView) itemView.findViewById(R.id.cardViewDataKemiskinan);
         }
     }
 
