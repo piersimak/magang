@@ -1,0 +1,11 @@
+<resources>
+    <string name="hint_nama_kepala_keluarga">Nama Kepala Keluarga</string>
+    <string name="hint_nomor_kartu_keluarga">Nomor Kartu Keluarga</string>
+    <string name="hint_alamat_lengkap">Alamat Lengkap</string>
+    <string name="hint_jumlah_tanggungan">Jumlah Tanggungan</string>
+    <string name="hint_permintaan_khusus">Permintaan Khusus</string>
+
+    <string name="hint_jumlah_donasi">Jumlah Uang Yang Akan Didonasikan</string>
+    <string name="hint_barang_donasi">Barang Yang Akan Didonasikan</string>
+    <string name="hint_keterangan_donasi">Keterangan</string>
+</resources>

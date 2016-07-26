@@ -1,0 +1,358 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/BackgroundYellow"
+    tools:context="diginetmedia.com.sikedes.fragment.TambahDataKemiskinanFragment">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:text="PERBARUI FOTO"
+                        android:layout_margin="5dp"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:layout_height="wrap_content" />
+                    <android.support.v7.widget.RecyclerView
+                        android:layout_width="match_parent"
+                        android:id="@+id/RecyclerViewGambar"
+                        android:layout_height="wrap_content">
+
+                    </android.support.v7.widget.RecyclerView>
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_margin="10dp"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_margin="5dp"
+                    android:layout_height="wrap_content">
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <android.support.design.widget.TextInputEditText
+                            android:id="@+id/txtNama"
+                            android:layout_width="fill_parent"
+                            android:maxLength="10"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/hint_nama_kepala_keluarga"
+                            />
+                    </android.support.design.widget.TextInputLayout>
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <android.support.design.widget.TextInputEditText
+                            android:id="@+id/txtNomorKK"
+                            android:layout_width="fill_parent"
+                            android:maxLength="10"
+                            android:inputType="number"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/hint_nomor_kartu_keluarga"
+                            />
+                    </android.support.design.widget.TextInputLayout>
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_marginBottom="20dp"
+                        android:layout_height="wrap_content">
+                        <android.support.design.widget.TextInputEditText
+                            android:id="@+id/txtAlamat"
+                            android:layout_width="fill_parent"
+                            android:maxLength="10"
+                            android:inputType="number"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/hint_alamat_lengkap"
+                            />
+                    </android.support.design.widget.TextInputLayout>
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_margin="5dp"
+                    android:layout_height="wrap_content">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginRight="4dp"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:text="Pendapatan Perbulan"
+                            android:layout_gravity="center_vertical"
+                            android:textSize="18dp"
+                            android:layout_height="wrap_content" />
+                        <Spinner
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/spinner_pendapatan_perbulan"
+                            android:layout_marginLeft="20dp"
+                            android:prompt="@string/pendapatan_perbulan"
+                            android:layout_gravity="center_horizontal"
+                            android:entries="@array/pendapatan_perbulan"
+                            android:spinnerMode="dialog" />
+                    </LinearLayout>
+
+
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <android.support.design.widget.TextInputEditText
+                            android:id="@+id/txtJumlahTanggungan"
+                            android:layout_width="fill_parent"
+                            android:maxLength="10"
+                            android:inputType="number"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/hint_jumlah_tanggungan"
+                            />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginRight="4dp"
+                        android:weightSum="4"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="0dip"
+                            android:layout_weight="2.5"
+                            android:text="Kondisi Lantai"
+                            android:layout_gravity="center_vertical"
+                            android:textSize="18dp"
+                            android:layout_height="wrap_content" />
+                        <Spinner
+                            android:layout_width="0dip"
+                            android:layout_weight="1.5"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/spinner_kondisi_lantai"
+                            android:layout_marginLeft="20dp"
+                            android:layout_gravity="center_vertical"
+                            android:entries="@array/kondisi" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginTop="20dp"
+                        android:weightSum="4"
+                        android:layout_marginRight="4dp"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="0dip"
+                            android:layout_weight="2.5"
+                            android:text="Kondisi Dinding"
+                            android:layout_gravity="center_vertical"
+                            android:textSize="18dp"
+                            android:layout_height="wrap_content" />
+                        <Spinner
+                            android:layout_width="0dip"
+                            android:layout_weight="1.5"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/spinner_kondisi_dinding"
+                            android:layout_marginLeft="20dp"
+                            android:prompt="@string/pendapatan_perbulan"
+                            android:layout_gravity="center_vertical"
+                            android:entries="@array/kondisi" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal"
+                        android:weightSum="4"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginRight="4dp"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="0dip"
+                            android:layout_weight="2.5"
+                            android:text="Kondisi Atap"
+                            android:layout_gravity="center_vertical"
+                            android:textSize="18dp"
+                            android:layout_height="wrap_content" />
+                        <Spinner
+                            android:layout_width="0dip"
+                            android:layout_weight="1.5"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/spinner_kondisi_atap"
+                            android:layout_marginLeft="20dp"
+                            android:prompt="@string/pendapatan_perbulan"
+                            android:layout_gravity="center_vertical"
+                            android:entries="@array/kondisi" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginTop="20dp"
+                        android:weightSum="4"
+                        android:layout_marginRight="4dp"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="0dip"
+                            android:layout_weight="2.5"
+                            android:text="Kondisi MCK"
+                            android:layout_gravity="center_vertical"
+                            android:textSize="18dp"
+                            android:layout_height="wrap_content" />
+                        <Spinner
+                            android:layout_width="0dip"
+                            android:layout_weight="1.5"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/spinner_kondisi_mck"
+                            android:layout_marginLeft="20dp"
+                            android:prompt="@string/pendapatan_perbulan"
+                            android:layout_gravity="center_vertical"
+                            android:entries="@array/kondisi" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal"
+                        android:layout_marginLeft="4dp"
+                        android:weightSum="4"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginRight="4dp"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="0dip"
+                            android:layout_weight="2.5"
+                            android:text="Kondisi Air"
+                            android:layout_gravity="center_vertical"
+                            android:textSize="18dp"
+                            android:layout_height="wrap_content" />
+                        <Spinner
+                            android:layout_width="0dip"
+                            android:layout_weight="1.5"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/spinner_kondisi_air"
+                            android:layout_marginLeft="20dp"
+                            android:prompt="@string/pendapatan_perbulan"
+                            android:layout_gravity="center_vertical"
+                            android:entries="@array/kondisi" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal"
+                        android:weightSum="4"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginRight="4dp"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="0dip"
+                            android:layout_weight="2.5"
+                            android:text="Kondisi Listrik"
+                            android:layout_gravity="center_vertical"
+                            android:textSize="18dp"
+                            android:layout_height="wrap_content" />
+                        <Spinner
+                            android:layout_width="0dip"
+                            android:layout_weight="1.5"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/spinner_kondisi_listrik"
+                            android:layout_marginLeft="20dp"
+                            android:prompt="@string/pendapatan_perbulan"
+                            android:layout_gravity="center_vertical"
+                            android:entries="@array/kondisi" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal"
+                        android:weightSum="4"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginRight="4dp"
+                        android:layout_marginBottom="20dp"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="0dip"
+                            android:layout_weight="2.5"
+                            android:text="Kondisi Pendidikan"
+                            android:layout_gravity="center_vertical"
+                            android:textSize="18dp"
+                            android:layout_height="wrap_content" />
+                        <Spinner
+                            android:layout_width="0dip"
+                            android:layout_weight="1.5"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/spinner_kondisi_pendidikan"
+                            android:layout_marginLeft="20dp"
+                            android:prompt="@string/pendapatan_perbulan"
+                            android:layout_gravity="center_vertical"
+                            android:entries="@array/kondisi" />
+                    </LinearLayout>
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_height="wrap_content">
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_margin="5dp"
+                    android:layout_height="wrap_content">
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/txtPermintaanKhusus"
+                        android:layout_width="fill_parent"
+                        android:maxLength="10"
+                        android:layout_marginBottom="10dp"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/hint_permintaan_khusus"
+                        />
+                </android.support.design.widget.TextInputLayout>
+            </android.support.v7.widget.CardView>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_margin="11dp"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:text="SIMPAN"
+                android:background="@color/colorPrimary"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </FrameLayout>
+
+    <!-- TODO: Update blank fragment layout -->
+
+
+</ScrollView>

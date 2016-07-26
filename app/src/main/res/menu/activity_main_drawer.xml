@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_home_black_24dp"
+            android:title="Beranda" />
+    </group>
+
+    <group android:checkableBehavior="single" android:id="@+id/guestmenu">
+        <item
+            android:id="@+id/nav_login"
+            android:icon="@drawable/ic_person_black_24dp"
+            android:title="Masuk" />
+        <item
+            android:id="@+id/nav_register"
+            android:icon="@drawable/ic_person_add_black_24dp"
+            android:title="Daftar" />
+    </group>
+
+    <group android:id="@+id/masyarakatmenu">
+        <item
+            android:id="@+id/nav_lapor"
+            android:icon="@drawable/ic_playlist_add_black_24dp"
+            android:title="Lapor" />
+    </group>
+
+    <group android:checkableBehavior="single" android:id="@+id/kepaladukuhmenu">
+        <item
+            android:id="@+id/nav_verif_data_kemiskinan"
+            android:icon="@drawable/ic_playlist_add_check_black_24dp"
+            android:title="Verifikasi Data Kemiskinan" />
+        <item
+            android:id="@+id/nav_verif_data_masyarakat"
+            android:icon="@drawable/ic_playlist_add_check_black_24dp"
+            android:title="Verifikasi Data Masyarakat" />
+    </group>
+
+    <group android:checkableBehavior="single" android:id="@+id/tpkdmenu">
+        <item
+            android:id="@+id/nav_tambah_data_kemiskinan"
+            android:icon="@drawable/ic_playlist_add_black_24dp"
+            android:title="Tambah Data Kemiskinan" />
+        <item
+            android:id="@+id/nav_lihat_laporan"
+            android:icon="@drawable/ic_content_copy_black_24dp"
+            android:title="Daftar Laporan Masyarakat" />
+        <item
+            android:id="@+id/nav_input_invoice"
+            android:icon="@drawable/ic_receipt_black_24dp"
+            android:title="Tambah Tagihan" />
+    </group>
+
+    <group android:checkableBehavior="single" android:id="@+id/surveyormenu">
+        <item
+            android:id="@+id/nav_update_data_kemiskinan"
+            android:icon="@drawable/ic_cached_black_24dp"
+            android:title="Perbarui Data Kemiskinan" />
+    </group>
+    <group android:checkableBehavior="single" android:id="@+id/donaturrmenu">
+        <item
+            android:id="@+id/nav_tambah_bantuan_tidaklangsung"
+            android:icon="@drawable/ic_playlist_add_black_24dp"
+            android:title="Tambah Bantuan Tidak Langsung" />
+        <item
+            android:id="@+id/nav_daftar_bantuan"
+            android:icon="@drawable/ic_content_copy_black_24dp"
+            android:title="Daftar Bantuan" />
+        <item
+            android:id="@+id/nav_daftar_tagihan"
+            android:icon="@drawable/ic_receipt_black_24dp"
+            android:title="Daftar Tagihan" />
+    </group>
+
+    <item android:title="Communicate">
+        <menu>
+
+        </menu>
+    </item>
+
+</menu>

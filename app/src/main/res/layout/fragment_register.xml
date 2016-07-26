@@ -1,0 +1,157 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/BackgroundYellow"
+    tools:context="diginetmedia.com.sikedes.fragment.RegisterFragment">
+
+
+    <!-- TODO: Update blank fragment layout -->
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_margin="10dp"
+        android:layout_height="wrap_content"
+        android:background="#ffffff">
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:visibility="gone"
+            android:id="@+id/Register1"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_margin="20dp"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:layout_width="match_parent"
+                    android:hint="Nama Lengkap"
+                    android:maxLength="20"
+                    android:layout_marginBottom="10dp"
+                    android:layout_height="wrap_content" />
+                <EditText
+                    android:layout_width="match_parent"
+                    android:hint="Alamat"
+                    android:maxLength="30"
+                    android:layout_marginBottom="10dp"
+                    android:layout_height="wrap_content" />
+                <EditText
+                    android:layout_width="match_parent"
+                    android:hint="NIK"
+                    android:maxLength="30"
+                    android:layout_marginBottom="10dp"
+                    android:layout_height="wrap_content" />
+                <EditText
+                    android:layout_width="match_parent"
+                    android:hint="Nomor Handphone"
+                    android:maxLength="30"
+                    android:layout_marginBottom="10dp"
+                    android:layout_height="wrap_content" />
+                    <Button
+                        android:layout_width="match_parent"
+                        android:id="@+id/tombolLanjutkan"
+                        android:text="Lanjutkan"
+                        android:textStyle="bold"
+                        android:layout_margin="4dp"
+                        android:background="@color/colorPrimary"
+                        android:layout_alignParentLeft="true"
+                        android:layout_height="wrap_content"
+                        android:textColor="#ffffff" />
+            </LinearLayout>
+
+        </FrameLayout>
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:visibility="visible"
+            android:id="@+id/Register2"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_margin="20dp"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:layout_width="match_parent"
+                    android:hint="Nama Pengguna"
+                    android:maxLength="20"
+                    android:layout_marginBottom="10dp"
+                    android:layout_height="wrap_content" />
+                <EditText
+                    android:layout_width="match_parent"
+                    android:hint="Email"
+                    android:maxLength="20"
+                    android:layout_marginBottom="10dp"
+                    android:layout_height="wrap_content" />
+                <EditText
+                    android:layout_width="match_parent"
+                    android:inputType="textPassword"
+                    android:hint="Kata Sandi"
+                    android:maxLength="30"
+                    android:layout_marginBottom="10dp"
+                    android:layout_height="wrap_content" />
+                <EditText
+                    android:layout_width="match_parent"
+                    android:inputType="textPassword"
+                    android:hint="Konfirmasi Kata Sandi"
+                    android:maxLength="30"
+                    android:layout_marginBottom="20dp"
+                    android:layout_height="wrap_content" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="4dp"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:text="Daftar Sebagai"
+                        android:layout_gravity="center_vertical"
+                        android:textSize="18dp"
+                        android:layout_height="wrap_content" />
+                    <Spinner
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/spinner"
+                        android:layout_marginLeft="20dp"
+                        android:prompt="@string/spinnerprompt"
+                        android:layout_gravity="center_horizontal"
+                        android:entries="@array/role"
+                        android:spinnerMode="dialog" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_margin="4dp"
+                    android:weightSum="2"
+                    android:orientation="horizontal"
+                    android:layout_height="wrap_content">
+                    <Button
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="Kembali"
+                        android:id="@+id/tombolKembali"
+                        android:textStyle="bold"
+                        android:layout_marginRight="10dp"
+                        android:background="@color/colorPrimary"
+                        android:layout_alignParentLeft="true"
+                        android:layout_height="wrap_content"
+                        android:textColor="#ffffff" />
+                    <Button
+                        android:layout_width="0dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:text="Daftar"
+                        android:textStyle="bold"
+                        android:background="@color/colorPrimary"
+                        android:layout_alignParentRight="true"
+                        android:layout_height="wrap_content"
+                        android:textColor="#ffffff" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </FrameLayout>
+
+    </android.support.v7.widget.CardView>
+
+</FrameLayout>

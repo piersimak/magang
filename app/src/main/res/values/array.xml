@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="role">
+        <item>Masyarakat</item>
+        <item>Donatur</item>
+    </array>
+
+    <array name="pendapatan_perbulan">
+        <item>0 - 299.000</item>
+        <item>300.000 - 599.000</item>
+        <item>600.000 - 1.000.000</item>
+        <item>1.100.000 - 1.499.000</item>
+        <item>1.500.000 - 2.000.000</item>
+        <item>Diatas 2.000.000</item>
+    </array>
+
+    <array name="kondisi">
+        <item>Ada</item>
+        <item>Tidak Ada</item>
+        <item>Rusak</item>
+    </array>
+
+    <array name="kategori">
+        <item>Air</item>
+        <item>Bangunan</item>
+        <item>Listrik</item>
+        <item>Makanan</item>
+        <item>Pendidikan</item>
+    </array>
+</resources>

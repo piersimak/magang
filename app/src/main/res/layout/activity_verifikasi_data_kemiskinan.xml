@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context="diginetmedia.com.sikedes.activity.DeskripsiDataKemiskinan"
+    android:background="@color/BackgroundYellow">
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        xmlns:cardview="http://schemas.android.com/apk/res-auto"
+        cardview:cardElevation="3dp"
+        cardview:cardUseCompatPadding="true"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/gambarDeskripsiKemiskinan"
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_margin="10dp"
+                android:layout_height="250dp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_margin="10dp"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:id="@+id/txtNama"
+                    android:text="Nama"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:id="@+id/txtAlamat"
+                    android:text="Alamat"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:id="@+id/txtNomorKK"
+                    android:text="Nomor KK"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:text="Kondisi"
+                    android:id="@+id/txtKondisi"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_margin="16dp"
+        android:weightSum="2"
+        android:layout_height="wrap_content">
+        <Button
+            android:layout_width="match_parent"
+            android:textColor="#FFFFFF"
+            android:background="#00c853"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:text="SETUJU"
+            android:layout_height="wrap_content" />
+        <Button
+            
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_margin="5dp"
+            android:background="#ff0000"
+            android:text="MERAGUKAN"
+            android:textColor="#FFFFFF"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+</LinearLayout>

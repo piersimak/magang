@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    xmlns:cardview="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:id="@+id/cardviewkategori"
+        android:layout_gravity="center"
+        android:layout_margin="2dp"
+        android:background="#413b3b"
+        cardview:cardElevation="3dp"
+        cardview:cardUseCompatPadding="true"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+
+            android:layout_margin="10dp"
+            android:layout_height="wrap_content"
+            android:background="#ffffff">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_margin="5dp"
+                    android:layout_gravity="center"
+                    android:id="@+id/gambarKategori"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/ic_launcher" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:id="@+id/txtKategori"
+                android:layout_margin="5dp"
+                android:textColor="#000000"
+                android:gravity="center_horizontal"
+                android:text="LISTRIK"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+
+    </LinearLayout>
