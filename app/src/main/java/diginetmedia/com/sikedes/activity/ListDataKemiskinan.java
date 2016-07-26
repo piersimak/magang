@@ -94,7 +94,7 @@ public class ListDataKemiskinan extends AppCompatActivity {
 
 
 
-        getMenuInflater().inflate(R.menu.menu_cart, menu);
+        getMenuInflater().inflate(R.menu.main, menu);
 
         return true;
     }
